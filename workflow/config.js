@@ -17,10 +17,9 @@ module.exports = {
 
             layers.push(
                 tf.layers.dense({ units: 100, activation: 'selu' }),
-                tf.layers.dense({ units: 100, activation: 'selu' }),
-                tf.layers.dense({ units: 3, activation: 'sigmoid' }),
             )
         }
+        layers.push(tf.layers.dense({ units: 3, activation: 'sigmoid' }))
 
         layers.push()
 

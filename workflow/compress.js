@@ -58,7 +58,7 @@ const { model_path, evolution_path, src_img, get_virgin_model, evolution_path_hy
 
         let info;
         let step = 0;
-        while (!info || info.history.loss[info.history.loss.length - 1] > 0.03) {
+        while (!info || info.history.loss[info.history.loss.length - 1] > 0.01) {
             info = await model.fit(train_ins, train_outs, {
                 epochs: 100,
                 batchSize: 25000,
